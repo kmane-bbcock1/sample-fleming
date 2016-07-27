@@ -219,9 +219,9 @@ resources:
     type: dockerOptions
     version:
       links:
-        - "plv2-image2"
+        - "fl-img5workingdir"
       volumesFrom:
-        - "plv2-image2:ro"
+        - "fl-img5workingdir:ro"
       user: "driftking"
       workingDir: "/makemeworking"
       cmd:
