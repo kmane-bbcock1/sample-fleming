@@ -1,17 +1,4 @@
 jobs:
-
-#RELEASE
-
-  #- name: fl-release
-  #  type: release
-   # steps:
-    #  - IN: fl-version
-     # - TASK: managed
-      #  bump: beta
-      #- IN: notify-man1cnrimg
-      #- IN: triggernotify7
-      
-#MANIFESTS
       
   - name: fl-man1
     type: manifest
@@ -19,53 +6,12 @@ jobs:
       - IN: fl-img1
       - IN: fl-tg1
       
- # - name: fl-man2multiimg
-  #  type: manifest
-   # steps:
-    #  - IN: fl-img2
-     # - IN: fl-img5workingdir
-      #- IN: fltp-dopts2
-      #- IN: flecs-dopts4
-       # applyTo:
-        #  - fl-img2
-     # - IN: fl-tg2
-      
-  #- name: fl-man3env
-   # type: manifest
-   # steps:
-    #  - IN: fl-img3env
-     # - IN: fl-params1
-     # - IN: fl-params2
-    #  - IN: fl-tg3
-      
-#  - name: fl-man4entrypoint
- #   type: manifest
-  #  steps:
-   #   - IN: fl-img4entrypoint
-    #  - TASK: managed
-     # - IN: fl-tg4
-      
   - name: fl-man5driftking
     type: manifest
     steps:
       - IN: fl-img5workingdir
       - IN: fl-tg5
       - TASK: managed
-  
-  #- name: fl-man6redismftomf
-   # type: manifest
-    #steps:
-     # - IN: fl-img6redis
-      #- IN: fl-man1
-      
-#  - name: fl-man7invalid
- #   type: manifest
-  #  steps:
-   #   - IN: fl-img1
-    #  - IN: fl-dopts6invalid
-     # - IN: fl-tg7
-
-# DEPLOYMENTS 
 
   - name: fl-ecsdeployup
     type: deploy
@@ -74,61 +20,10 @@ jobs:
       - IN: fl-ecscluster
       - TASK: managed
         deployMethod: upgrade
-      
-  #- name: fl-ecsdeploybg
-   # type: deploy
-    #steps:
-     # - IN: fl-man4entrypoint
-      #- IN: flecs-dopts4
-      #- IN: fl-ecscluster
-      
- # - name: fl-ecsdeployupmftomf
-  #  type: deploy
-   # steps:
-    #  - IN: fl-man6redismftomf
-     # - IN: fl-ecscluster
-      #- TASK: managed
-       # deployMethod: upgrade
-      
- # - name: fl-tpdeployup
-  #  type: deploy
-   # steps:
-    #  - IN: fl-man5driftking
-    #  - IN: fltp-dopts1
-     # - IN: fl-tripubcluster
-     # - TASK: managed
-      #  deployMethod: upgrade
-      
-  #- name: fl-tpdeploybg
-   # type: deploy
-    #steps:
-     # - IN: fl-man4entrypoint
-    #  - IN: fl-tripubcluster
-      
-  #- name: fl-gkedeployup
-   # type: deploy
-    #steps:
-     # - IN: fl-man1
-      #- IN: flgke-dopts3
-      #- IN: fl-gkecluster
-      #- TASK: managed
-       # deployMethod: upgrade
-      
+        
   - name: fl-gkedeploybg
     type: deploy
     steps:
       - IN: fl-man5driftking
       - IN: flgke-dopts3
       - IN: fl-gkecluster
-      
- # - name: fl-dcldeploy
-  #  type: deploy
-   # steps:
-    #  - IN: fl-man5driftking
-     # - IN: fl-dclcluster
-        
- # - name: fl-ddcdeploy
-  #  type: deploy
-   # steps:
-    #  - IN: fl-man5driftking
-     # - IN: fl-ddccluster
