@@ -67,52 +67,52 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: fl-ecsdeployup
-    type: deploy
-    steps:
-      - IN: fl-man2multiimg
-      - IN: fl-ecscluster
-      - TASK: managed
-        deployMethod: upgrade
+ # - name: fl-ecsdeployup
+  #  type: deploy
+   # steps:
+    #  - IN: fl-man2multiimg
+     # - IN: fl-ecscluster
+      #- TASK: managed
+       # deployMethod: upgrade
       
-  - name: fl-ecsdeploybg
-    type: deploy
-    steps:
-      - IN: fl-man4entrypoint
-      - IN: flecs-dopts4
-      - IN: fl-ecscluster
+  #- name: fl-ecsdeploybg
+   # type: deploy
+    #steps:
+     # - IN: fl-man4entrypoint
+      #- IN: flecs-dopts4
+      #- IN: fl-ecscluster
       
-  - name: fl-ecsdeployupmftomf
-    type: deploy
-    steps:
-      - IN: fl-man6redismftomf
-      - IN: fl-ecscluster
-      - TASK: managed
-        deployMethod: upgrade
+ # - name: fl-ecsdeployupmftomf
+  #  type: deploy
+   # steps:
+    #  - IN: fl-man6redismftomf
+     # - IN: fl-ecscluster
+      #- TASK: managed
+       # deployMethod: upgrade
       
-  - name: fl-tpdeployup
-    type: deploy
-    steps:
-      - IN: fl-man5driftking
-      - IN: fltp-dopts1
-      - IN: fl-tripubcluster
-      - TASK: managed
-        deployMethod: upgrade
+ # - name: fl-tpdeployup
+  #  type: deploy
+   # steps:
+    #  - IN: fl-man5driftking
+    #  - IN: fltp-dopts1
+     # - IN: fl-tripubcluster
+     # - TASK: managed
+      #  deployMethod: upgrade
       
-  - name: fl-tpdeploybg
-    type: deploy
-    steps:
-      - IN: fl-man4entrypoint
-      - IN: fl-tripubcluster
+  #- name: fl-tpdeploybg
+   # type: deploy
+    #steps:
+     # - IN: fl-man4entrypoint
+    #  - IN: fl-tripubcluster
       
-  - name: fl-gkedeployup
-    type: deploy
-    steps:
-      - IN: fl-man1
-      - IN: flgke-dopts3
-      - IN: fl-gkecluster
-      - TASK: managed
-        deployMethod: upgrade
+  #- name: fl-gkedeployup
+   # type: deploy
+    #steps:
+     # - IN: fl-man1
+      #- IN: flgke-dopts3
+      #- IN: fl-gkecluster
+      #- TASK: managed
+       # deployMethod: upgrade
       
   - name: fl-gkedeploybg
     type: deploy
@@ -121,14 +121,14 @@ jobs:
       - IN: flgke-dopts3
       - IN: fl-gkecluster
       
-  - name: fl-dcldeploy
-    type: deploy
-    steps:
-      - IN: fl-man5driftking
-      - IN: fl-dclcluster
+ # - name: fl-dcldeploy
+  #  type: deploy
+   # steps:
+    #  - IN: fl-man5driftking
+     # - IN: fl-dclcluster
         
-  - name: fl-ddcdeploy
-    type: deploy
-    steps:
-      - IN: fl-man5driftking
-      - IN: fl-ddccluster
+ # - name: fl-ddcdeploy
+  #  type: deploy
+   # steps:
+    #  - IN: fl-man5driftking
+     # - IN: fl-ddccluster
