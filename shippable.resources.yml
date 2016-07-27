@@ -275,6 +275,13 @@ resources:
     type: time
     seed:
       interval: "8 8 8 8 *"
+      
+#kickStart
+
+  #- name: kickstartresource
+#    type: kickStart
+#    version: 
+#      count: 1
         
 #GITREPO:
 
