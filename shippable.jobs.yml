@@ -2,12 +2,12 @@ jobs:
 
 #RELEASE
 
-  - name: fl-release
-    type: release
-    steps:
-      - IN: fl-version
-      - TASK: managed
-        bump: beta
+  #- name: fl-release
+  #  type: release
+   # steps:
+    #  - IN: fl-version
+     # - TASK: managed
+      #  bump: beta
       #- IN: notify-man1cnrimg
       #- IN: triggernotify7
       
@@ -19,31 +19,31 @@ jobs:
       - IN: fl-img1
       - IN: fl-tg1
       
-  - name: fl-man2multiimg
-    type: manifest
-    steps:
-      - IN: fl-img2
-      - IN: fl-img5workingdir
+ # - name: fl-man2multiimg
+  #  type: manifest
+   # steps:
+    #  - IN: fl-img2
+     # - IN: fl-img5workingdir
       #- IN: fltp-dopts2
       #- IN: flecs-dopts4
        # applyTo:
         #  - fl-img2
-      - IN: fl-tg2
+     # - IN: fl-tg2
       
-  - name: fl-man3env
-    type: manifest
-    steps:
-      - IN: fl-img3env
-      - IN: fl-params1
+  #- name: fl-man3env
+   # type: manifest
+   # steps:
+    #  - IN: fl-img3env
+     # - IN: fl-params1
      # - IN: fl-params2
-      - IN: fl-tg3
+    #  - IN: fl-tg3
       
-  - name: fl-man4entrypoint
-    type: manifest
-    steps:
-      - IN: fl-img4entrypoint
-      - TASK: managed
-      - IN: fl-tg4
+#  - name: fl-man4entrypoint
+ #   type: manifest
+  #  steps:
+   #   - IN: fl-img4entrypoint
+    #  - TASK: managed
+     # - IN: fl-tg4
       
   - name: fl-man5driftking
     type: manifest
@@ -52,18 +52,18 @@ jobs:
       - IN: fl-tg5
       - TASK: managed
   
-  - name: fl-man6redismftomf
-    type: manifest
-    steps:
-      - IN: fl-img6redis
-      - IN: fl-man1
+  #- name: fl-man6redismftomf
+   # type: manifest
+    #steps:
+     # - IN: fl-img6redis
+      #- IN: fl-man1
       
-  - name: fl-man7invalid
-    type: manifest
-    steps:
-      - IN: fl-img1
-      - IN: fl-dopts6invalid
-      - IN: fl-tg7
+#  - name: fl-man7invalid
+ #   type: manifest
+  #  steps:
+   #   - IN: fl-img1
+    #  - IN: fl-dopts6invalid
+     # - IN: fl-tg7
 
 # DEPLOYMENTS 
 
