@@ -232,7 +232,7 @@ resources:
         options:
           max-size: 50m
   
-  - name: notify-dopts6invalid
+  - name: fl-dopts6invalid
     type: dockerOptions
     version:
       links:
