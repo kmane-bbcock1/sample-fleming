@@ -245,8 +245,8 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-        TEST=BETA
-        pipelinev2=fleming
+        TEST: BETA
+        pipelinev2: fleming
 
   - name: fl-params2
     type: params
