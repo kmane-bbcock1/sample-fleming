@@ -67,13 +67,13 @@ jobs:
 
 # DEPLOYMENTS 
 
- # - name: fl-ecsdeployup
-  #  type: deploy
-   # steps:
-    #  - IN: fl-man2multiimg
-     # - IN: fl-ecscluster
-      #- TASK: managed
-       # deployMethod: upgrade
+  - name: fl-ecsdeployup
+    type: deploy
+    steps:
+      - IN: fl-man5driftking
+      - IN: fl-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
       
   #- name: fl-ecsdeploybg
    # type: deploy
