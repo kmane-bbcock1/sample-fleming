@@ -16,7 +16,7 @@ jobs:
   - name: fl-ecsdeployup
     type: deploy
     steps:
-      - IN: fl-man5driftking
+      - IN: fl-man1
       - IN: fl-ecscluster
       - TASK: managed
         deployMethod: upgrade
