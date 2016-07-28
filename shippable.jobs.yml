@@ -27,3 +27,21 @@ jobs:
       - IN: fl-man5driftking
       - IN: flgke-dopts3
       - IN: fl-gkecluster
+      
+  - name: fl-dcldeploy
+    type: deploy
+    steps:
+      - IN: fl-man1
+      - IN: fl-dclcluster
+        
+  - name: fl-ddcdeploy
+    type: deploy
+    steps:
+      - IN: fl-man1
+      - IN: fl-ddccluster
+      
+  - name: fl-tpdeploybg
+    type: deploy
+    steps:
+      - IN: fl-man1
+      - IN: fl-tripubcluster
