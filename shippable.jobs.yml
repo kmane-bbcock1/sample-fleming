@@ -1,47 +1,29 @@
 jobs:
-      
-  - name: fl-man1
-    type: manifest
-    steps:
-      - IN: fl-img1
-      - IN: fl-tg1
-      
-  - name: fl-man5driftking
-    type: manifest
-    steps:
-      - IN: fl-img5workingdir
-      - IN: fl-tg5
-      - TASK: managed
 
-  - name: fl-ecsdeployup
-    type: deploy
+#RELEASE
+
+  - name: bb-release
+    type: release
     steps:
-      - IN: fl-man1
-      - IN: fl-ecscluster
+      - IN: bb-version
       - TASK: managed
-        deployMethod: upgrade
-        
-  - name: fl-gkedeploybg
-    type: deploy
-    steps:
-      - IN: fl-man5driftking
-      - IN: flgke-dopts3
-      - IN: fl-gkecluster
+        bump: beta
+      - IN: bb-man1
+      #- IN: bb-tg1
       
-  - name: fl-dcldeploy
-    type: deploy
-    steps:
-      - IN: fl-man1
-      - IN: fl-dclcluster
-        
-  - name: fl-ddcdeploy
-    type: deploy
-    steps:
-      - IN: fl-man1
-      - IN: fl-ddccluster
+#MANIFESTS
       
-  - name: fl-tpdeploybg
+  - name: bb-man1
+    type: manifest
+    steps:
+      - IN: bb-img1
+      - IN: bb-tg1
+
+# DEPLOYMENTS 
+
+  - name: bb-ddcdeployup
     type: deploy
     steps:
-      - IN: fl-man1
-      - IN: fl-tripubcluster
+      - IN: bb-man1
+      - IN: bb-ddccluster
+
