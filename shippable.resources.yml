@@ -1,43 +1,35 @@
+
+
 resources:
 
 #CLUSTERS
 
-  - name: fl-ddccluster
+  - name: bb-ddccluster
     type: cluster
     integration: plv2-ddc
     pointer:
       sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
-
-  - name: fl-dclcluster
-    type: cluster
-    integration: plv2-dcl
-    pointer:
-     sourceName : "cluster-dcl"
-
-  - name: fl-ecscluster
-    type: cluster
-    integration: plv2-ecs
-    pointer:
-      sourceName : "testCL"
-      region: "us-west-2"
       
-  - name: fl-gkecluster
-    type: cluster
-    integration: plv2-gke
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
-      region: "us-east1-d"
-      
-  - name: fl-tripubcluster
-    type: cluster
-    integration: plv2-tripub
-    pointer:
-      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
-      region: "us-east-2"
+#VERSIONS
 
+  - name: bb-version
+    type: version
+    seed:
+      versionName: "1.2.123-beta"
+      
+#NOTIFICATIONS
+
+  - name: bb-email
+    type: notification
+    integration: "plv2-emailcock1"
+    pointer:
+      recipients: 
+        - "varsha@shippable.com"
+        - "shiphitchcock1@gmail.com"
+        
 #IMAGES
         
-  - name: fl-img1
+  - name: bb-img1
     type: image
     integration: plv2-docker
     pointer:
@@ -45,21 +37,41 @@ resources:
     seed:
       versionName: "deploy.1"
       
-  - name: fl-img4entrypoint
+  - name: bb-img2
     type: image
     integration: plv2-docker
     pointer:
-      sourceName: "scriptnull/debian"
+      sourceName: "shippabledocker/pipelinev2"
     seed:
-      versionName: "entrypoint"
-  
-  - name: fl-img5workingdir
-    type: image
-    integration: plv2-docker
-    pointer:
-      sourceName: "scriptnull/debian"
+      versionName: "deploy.2"
+        
+#TIME
+
+  - name: bb-timeresource
+    type: time
     seed:
-      versionName: "driftking"
-    flags: #this for UI SPOG page there is filters 
-      - fl-img5workingdir
+      interval: "8 8 8 8 *"
       
+#kickStart
+
+  #- name: kickstartresource
+#    type: kickStart
+#    version: 
+#      count: 1
+        
+#GITREPO:
+
+  #- name: "gitrepo_plv2notifications-notifyemailslack"
+   # type: gitRepo
+    #integration: "shiphitchcock1-github"
+    #pointer:
+     # sourceName: "shiphitchcock1/plv2-notifications"
+      #branch: "notify-emailslack"
+      
+  #- name: "syncRepo_plv2notifications-notifyemailslack"
+   # type: syncRepo
+  #  integration: "shiphitchcock1-github"
+   # pointer:
+    #  sourceName: "shiphitchcock1/plv2-notifications"
+     # branch: "notify-emailslack"
+
