@@ -26,4 +26,3 @@ jobs:
     steps:
       - IN: bb-man1
       - IN: bb-ddccluster
-
