@@ -1,7 +1,0 @@
-jobs:
-      
-  - name: testgrbb-man1
-    type: manifest
-    steps:
-      - IN: testgrbb-img1
-      - IN: testgrbb-tg1
