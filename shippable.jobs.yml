@@ -4,4 +4,4 @@ jobs:
     type: manifest
     steps:
       - IN: testsrbb-img1
-      - IN: testsrtbb-tg1
+      - IN: testsrbb-tg1
