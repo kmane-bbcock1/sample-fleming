@@ -52,26 +52,48 @@ resources:
     seed:
       interval: "8 8 8 8 *"
       
+#DOCKER OPTIONS
+
+  - name: glab-dopts5
+    type: dockerOptions
+    version:
+      memory: 48
+
+#PARAMS
+
+  - name: glab-params1
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "localhost:28017"
+        
+#REPLICAS
+
+  - name: glab-replica1
+    type: replicas
+    version:
+      count: 1
+      
 #kickStart
 
-  #- name: kickstartresource
-#    type: kickStart
-#    version: 
-#      count: 1
+  - name: glab-kickstart
+    type: kickStart
+    version: 
+      count: 1
         
 #GITREPO:
 
-  #- name: "gitrepo_plv2notifications-notifyemailslack"
-   # type: gitRepo
-    #integration: "shiphitchcock1-github"
-    #pointer:
-     # sourceName: "shiphitchcock1/plv2-notifications"
-      #branch: "notify-emailslack"
+  - name: "gitrepo_samplefleming_testgitrepo"
+    type: gitRepo
+    integration: "bitbucket"
+    pointer:
+      sourceName: "shiphitchcock1/sample-fleming"
+      branch: "testgitrepo"
       
-  #- name: "syncRepo_plv2notifications-notifyemailslack"
-   # type: syncRepo
-  #  integration: "shiphitchcock1-github"
-   # pointer:
-    #  sourceName: "shiphitchcock1/plv2-notifications"
-     # branch: "notify-emailslack"
+  - name: "syncRepo_samplefleming_syncgitrepo"
+    type: syncRepo
+    integration: "bitbucket"
+    pointer:
+      sourceName: "shiphitchcock1/sample-fleming"
+      branch: "testsyncrepo"
 
