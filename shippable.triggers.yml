@@ -1,10 +1,10 @@
 triggers:
-   - name: fl-tg1
+   - name: bb-tg1
      type: trigger
      version:
-       counter: 3
+       counter: 1
        
-   - name: fl-tg5
+   - name: bb-tg5
      type: trigger
      version:
-       counter: 2
+       counter: 1
