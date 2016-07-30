@@ -1,0 +1,5 @@
+triggers:
+   - name: ymlt-tg1
+     type: trigger
+     version:
+       counter: 1
