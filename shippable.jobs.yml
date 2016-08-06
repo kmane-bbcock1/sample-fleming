@@ -31,4 +31,4 @@ jobs:
     type: rSync
     steps:
       - IN: bbsyncRepo_samplefleming_syncgitrepo
-      - IN: bb-tg1
+      - IN: bb-tg1 
