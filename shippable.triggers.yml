@@ -2,7 +2,7 @@ triggers:
    - name: bb-tg1
      type: trigger
      version:
-       counter: 1
+       counter: 2
        
    - name: bb-tg2
      type: trigger
