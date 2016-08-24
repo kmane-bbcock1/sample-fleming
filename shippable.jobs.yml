@@ -2,33 +2,33 @@ jobs:
       
 #MANIFEST
 
-  - name: bb-man1
+  - name: sl-man1
     type: manifest
     steps:
-      - IN: bb-img1
-      - IN: bb-tg1
+      - IN: sl-img1
+      - IN: sl-tg1
       
 #DEPLOY    
 
-  - name: bb-ddcdeploy
-    type: deploy
-    steps:
-      - IN: bb-man1
-      - IN: bb-ddccluster      
+ # - name: bb-ddcdeploy
+ #   type: deploy
+ #   steps:
+  #    - IN: bb-man1
+  #    - IN: bb-ddccluster      
 
 #RELEASE
 
-  - name: bb-release
-    type: release
-    steps:
-      - IN: bb-version
-      - TASK: managed
-        bump: beta
-      - IN: bb-man1
-      - IN: bb-tg1
+ # - name: bb-release
+ #   type: release
+  # steps:
+    #  - IN: bb-version
+  #   - TASK: managed
+     #   bump: beta
+  #    - IN: bb-man1
+    #  - IN: bb-tg1
       
-  - name: bb-rsync1
-    type: rSync
-    steps:
-      - IN: bbsyncRepo_samplefleming_syncgitrepo
-      - IN: bb-tg1 
+ # - name: bb-rsync1
+ #   type: rSync
+  #  steps:
+   #   - IN: bbsyncRepo_samplefleming_syncgitrepo
+    #  - IN: bb-tg1 
