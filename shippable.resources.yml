@@ -4,7 +4,7 @@ resources:
 
 #CLUSTERS
 
-  - name: bb-ddccluster
+  - name: sl-ddccluster
     type: cluster
     integration: plv2-ddc
     pointer:
@@ -12,14 +12,14 @@ resources:
       
 #VERSIONS
 
-  - name: bb-version
+  - name: sl-version
     type: version
     seed:
       versionName: "1.2.123-beta"
       
 #NOTIFICATIONS
 
-  - name: bb-email
+  - name: sl-email
     type: notification
     integration: "plv2-emailcock1"
     pointer:
@@ -29,7 +29,7 @@ resources:
         
 #IMAGES
         
-  - name: bb-img1
+  - name: sl-img1
     type: image
     integration: plv2-docker
     pointer:
@@ -37,7 +37,7 @@ resources:
     seed:
       versionName: "deploy.1"
       
-  - name: bb-img2
+  - name: sl-img2
     type: image
     integration: plv2-docker
     pointer:
@@ -45,7 +45,7 @@ resources:
     seed:
       versionName: "deploy.2"
       
-  - name: bb-img3
+  - name: sl-img3
     type: image
     integration: plv2-docker
     pointer:
@@ -56,21 +56,21 @@ resources:
         
 #TIME
 
-  - name: bb-timeresource
+  - name: sl-timeresource
     type: time
     seed:
       interval: "8 8 8 8 *"
       
 #DOCKER OPTIONS
 
-  - name: bb-dopts1
+  - name: sl-dopts1
     type: dockerOptions
     version:
       memory: 48
 
 #PARAMS
 
-  - name: bb-params1
+  - name: sl-params1
     type: params
     version:
       params:
@@ -78,28 +78,28 @@ resources:
         
 #REPLICAS
 
-  - name: bb-replica1
+  - name: sl-replica1
     type: replicas
     version:
       count: 1
       
 #kickStart
 
-  - name: bb-kickstart
-    type: kickStart
-    version: 
-      count: 1
+ # - name: bb-kickstart
+  #  type: kickStart
+ #   version: 
+   #   count: 1
         
 #GITREPO:
 
-  - name: "bbgitrepo_samplefleming_testgitrepo"
+  - name: "slgitrepo_samplefleming_testgitrepo"
     type: gitRepo
     integration: "bitbucket"
     pointer:
       sourceName: "shiphitchcock1/sample-fleming"
       branch: "testgitrepo"
       
- # - name: "bbsyncRepo_samplefleming_syncgitrepo"
+ # - name: "slsyncRepo_samplefleming_syncgitrepo"
   #  type: syncRepo
    # integration: "bitbucket"
     #pointer:
