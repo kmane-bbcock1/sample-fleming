@@ -85,10 +85,10 @@ resources:
       
 #kickStart
 
-  - name: bb-kickstart
-    type: kickStart
-    version: 
-      count: 1
+#  - name: bb-kickstart
+ #   type: kickStart
+  #  version: 
+   #   count: 1
         
 #GITREPO:
 
@@ -99,10 +99,10 @@ resources:
       sourceName: "shiphitchcock1/sample-fleming"
       branch: "testgitrepo"
       
-  - name: "bbsyncRepo_samplefleming_syncgitrepo"
-    type: syncRepo
-    integration: "bitbucket"
-    pointer:
-      sourceName: "shiphitchcock1/sample-fleming"
-      branch: "testsyncrepo"
+ # - name: "bbsyncRepo_samplefleming_syncgitrepo"
+  #  type: syncRepo
+   # integration: "bitbucket"
+    #pointer:
+     # sourceName: "shiphitchcock1/sample-fleming"
+      #branch: "testsyncrepo"
 
