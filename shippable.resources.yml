@@ -92,7 +92,7 @@ resources:
         
 #GITREPO:
 
-  - name: "bbgitrepo_samplefleming_testgitrepo"
+  - name: "slgitrepo_samplefleming_testgitrepo"
     type: gitRepo
     integration: "bitbucket"
     pointer:
