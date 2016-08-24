@@ -17,6 +17,11 @@ resources:
     seed:
       versionName: "1.2.123-beta"
       
+  - name: sl-version2
+    type: version
+    seed:
+      versionName: "1.2.123-beta"
+      
 #NOTIFICATIONS
 
   - name: sl-email
