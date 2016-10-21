@@ -13,8 +13,8 @@ resources:
 #VERSIONS
 
   - name: bb-version
-   # type: versiontest
-    seed:
+    type: versiontest
+    #seed:
       versionName: "1.2.123-beta"
 
         
