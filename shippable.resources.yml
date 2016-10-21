@@ -16,16 +16,7 @@ resources:
     type: version
     seed:
       versionName: "1.2.123-beta"
-      
-#NOTIFICATIONS
 
-  - name: bb-email
-    type: notification
-    integration: "plv2-emailcock1"
-    pointer:
-      recipients: 
-        - "varsha@shippable.com"
-        - "shiphitchcock1@gmail.com"
         
 #IMAGES
         
