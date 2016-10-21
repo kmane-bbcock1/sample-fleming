@@ -48,8 +48,8 @@ resources:
       
 #NOTIFICATION
   - name: bb-slack
-    #type: notification
-    integration: "plv2-slackplv2"
+    type: notification
+    integration: "plv2-slack"
     pointer:
       recipients:
         - "#pipeline-pvt"
@@ -57,7 +57,7 @@ resources:
         - "@shiphitchcock1"
 
   - name: bb-email
-   # type: notification
+    type: notification
     pointer:
       method: email
       recipients: 
