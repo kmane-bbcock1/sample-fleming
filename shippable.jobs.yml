@@ -8,6 +8,12 @@ jobs:
       - IN: bb-img1
       - IN: bb-time
       - IN: bb-tg1
+    on_start:
+      - NOTIFY: bb-email
+      - NOTIFY: bb-slack
+    on_success:
+      - NOTIFY: bb-email
+      - NOTIFY: bb-slack
       
 #DEPLOY    
 
