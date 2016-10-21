@@ -1,10 +1,12 @@
 triggers:
-   - name: bb-tg1
-     type: image
-     version:
-       counter: 1
+  - name: bb-trimg
+    type: image
+    integration: plv2-docker
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.1"
        
    - name: bb-tg5
      type: trigger
      version:
-       counter: 1
