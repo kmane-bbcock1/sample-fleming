@@ -6,6 +6,7 @@ jobs:
     type: manifest
     steps:
       - IN: bb-img1
+      - IN: bb-time
       - IN: bb-tg1
       
 #DEPLOY    
