@@ -10,11 +10,11 @@ jobs:
       
 #DEPLOY    
 
-  - name: bb-ddcdeploy
-    type: deploy
-    steps:
-      - IN: bb-man1
-      - IN: bb-ddccluster      
+ # - name: bb-ddcdeploy
+  #  type: deploy
+   # steps:
+    #  - IN: bb-man1
+     # - IN: bb-ddccluster      
 
 #RELEASE
 
@@ -25,7 +25,7 @@ jobs:
       - TASK: managed
         bump: beta
       - IN: bb-man1
-      - IN: bb-tg1
+  #    - IN: bb-tg1
       
   #- name: bb-rsync1
    # type: rSync
