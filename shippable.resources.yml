@@ -54,7 +54,7 @@ resources:
   - name: bb-time
     type: time
     seed:
-      interval: "8 8 8 8 *"
+      interval: "/2 * * * *"
       
 #DOCKER OPTIONS
 
