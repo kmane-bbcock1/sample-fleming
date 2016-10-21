@@ -57,13 +57,13 @@ resources:
   - name: bb-time2
     type: time
     seed:
-      interval: "10 2 "
-      
-  - name: bb-time2
-    type: version
-    seed:
-      versionName: "1.2.123-beta"
+      interval: "10 * * * *"
 
+  - name: bb-time2
+    type: time
+    seed:
+      interval: "* 21 * * *"
+      
 #DOCKER OPTIONS
 
   - name: bb-dopts1
