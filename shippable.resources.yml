@@ -57,9 +57,9 @@ resources:
       interval: "10 * * * *"
       
   - name: bb-time2
-   # type: time
+    type: image
     seed:
-      interval: "10 * * * *"
+      interval: "10 2 2 * *"
       
 #DOCKER OPTIONS
 
