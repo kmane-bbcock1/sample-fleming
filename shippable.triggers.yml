@@ -10,4 +10,4 @@ triggers:
   - name: bb-tg5
     type: trigger
     #version:
-       counter: 1
+       message: testing
