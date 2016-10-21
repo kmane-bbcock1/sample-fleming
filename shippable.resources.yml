@@ -48,7 +48,7 @@ resources:
       
 #NOTIFICATION
   - name: bb-slack
-    type: notification
+    type: notifications
     integration: "plv2-slackplv2"
     pointer:
       recipients:
@@ -57,7 +57,7 @@ resources:
         - "@shiphitchcock1"
 
   - name: bb-email
-    type: notification
+    type: notifications
     pointer:
       method: email
       recipients: 
