@@ -13,9 +13,9 @@ resources:
 #VERSIONS
 
   - name: bb-version
-    type: versiontest
-    #seed:
-      versionName: "1.2.123-beta"
+    type: version
+    seed:
+     # versionName: "1.2.123-beta"
 
         
 #IMAGES
