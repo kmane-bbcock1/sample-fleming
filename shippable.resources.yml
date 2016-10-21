@@ -52,9 +52,9 @@ resources:
     integration: "plv2-slackplv2"
     pointer:
       recipients:
-        #- "#pipeline-pvt"
-        #- "#pipeline-public"
-        #- "@shiphitchcock1"
+        - "#pipeline-pvttest"
+        - "#pipeline-publictest"
+        - "@shiphitchcock1test"
 
   - name: bb-email
     type: notification
