@@ -14,7 +14,13 @@ jobs:
     type: deploy
     steps:
       - IN: bb-man1
-      - IN: bb-ddccluster      
+      - IN: bb-ddccluster 
+    on_start:
+      - NOTIFY: bb-email
+      - NOTIFY: bb-slack
+    on_success:
+      - NOTIFY: bb-email
+      - NOTIFY: bb-slack
 
 #RELEASE
 
