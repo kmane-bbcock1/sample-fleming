@@ -20,11 +20,6 @@ resources:
   - name: bb-versiontest
     type: version
     seed:
-      versionName: "1.2.$%#-beta"
-
-  - name: bb-versiontest
-    type: version
-    seed:
       versionName: "1.22.333-rc"
 
 #IMAGES
@@ -56,7 +51,7 @@ resources:
         
 #TIME
 
-  - name: bb-timeresource
+  - name: bb-versiontest
     type: time
     seed:
       interval: "8 8 8 8 *"
