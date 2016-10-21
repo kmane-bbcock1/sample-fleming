@@ -27,8 +27,8 @@ jobs:
       - IN: bb-man1
       - IN: bb-tg1
       
-  - name: bb-rsync1
-    type: rSync
-    steps:
-      - IN: bbsyncRepo_samplefleming_syncgitrepo
-      - IN: bb-tg1
+  #- name: bb-rsync1
+   # type: rSync
+    #steps:
+     # - IN: bbsyncRepo_samplefleming_syncgitrepo
+      #- IN: bb-tg1
