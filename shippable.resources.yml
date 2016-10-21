@@ -56,6 +56,11 @@ resources:
     seed:
       interval: "10 * * * *"
       
+  - name: bb-time2
+   # type: time
+    seed:
+      interval: "10 * * * *"
+      
 #DOCKER OPTIONS
 
   - name: bb-dopts1
