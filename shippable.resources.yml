@@ -51,7 +51,7 @@ resources:
         
 #TIME
 
-  - name: bb-versiontest
+  - name: bb-time
     type: time
     seed:
       interval: "8 8 8 8 *"
