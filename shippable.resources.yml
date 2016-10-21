@@ -50,16 +50,16 @@ resources:
   - name: bb-slack
     type: notification
     integration: "plv2-slackplv2"
-    pointer:
+    #pointer:
       recipients:
-        - "#pipeline-pvttest"
-        - "#pipeline-publictest"
-        - "@shiphitchcock1test"
+        - "#pipeline-pvt"
+        - "#pipeline-public"
+        - "@shiphitchcock1"
 
   - name: bb-email
     type: notification
     pointer:
-      method: email
+    #  method: email
       recipients: 
         - "varsha@shippable.com"
         - "shiphitchcock1@gmail.com"      
