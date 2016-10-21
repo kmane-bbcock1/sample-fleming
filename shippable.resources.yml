@@ -54,7 +54,7 @@ resources:
   - name: bb-time
     type: time
     seed:
-      interval: "10 * * * *"
+      interval: "* * 21 10 *"
       
   - name: bb-time2
     type: time
