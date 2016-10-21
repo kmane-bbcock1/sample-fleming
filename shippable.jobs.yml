@@ -18,13 +18,13 @@ jobs:
 
 #RELEASE
 
-  - name: bb-release
+  - name: bb-release1
     type: release
     steps:
       - IN: bb-version
       - TASK: managed
         bump: beta
-      - IN: bb-man1
+    #  - IN: bb-man1
   #    - IN: bb-tg1
       
   #- name: bb-rsync1
