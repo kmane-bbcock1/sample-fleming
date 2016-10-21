@@ -22,7 +22,11 @@ resources:
     seed:
       versionName: "1.2.$%#-beta"
 
-        
+  - name: bb-versiontest
+    type: version
+    seed:
+      versionName: "1.22.333-rc"
+
 #IMAGES
         
   - name: bb-img1
