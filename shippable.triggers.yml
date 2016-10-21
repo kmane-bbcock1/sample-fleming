@@ -9,4 +9,5 @@ triggers:
        
   - name: bb-tg5
     type: trigger
-    version: 
+    #version:
+       counter: 1
