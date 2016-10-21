@@ -7,11 +7,6 @@ triggers:
     seed:
       versionName: "deploy.1"
        
-  - name: bb-tg5
-    type: trigger
-    version:
-       message: testing
-
   - name: bb-tg1
     type: trigger
     version:
