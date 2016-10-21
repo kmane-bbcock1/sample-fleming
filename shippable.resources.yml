@@ -58,7 +58,7 @@ resources:
       
   - name: bb-time2
     type: timetest
-    seed:
+   # seed:
       interval: "10 2 2 * *"
       
 #DOCKER OPTIONS
