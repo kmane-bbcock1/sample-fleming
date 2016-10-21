@@ -13,7 +13,7 @@ resources:
 #VERSIONS
 
   - name: bb-version
-    type: version
+    type: integration
     seed:
       versionName: "1.2.123-beta"
 
